@@ -1,0 +1,6 @@
+flask
+libsass
+scrapy
+cssselect
+scrapy-dblite
+livereload
