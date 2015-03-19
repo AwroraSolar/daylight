@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Awrora Solar es una
+					  organizaci&oacute;n que
+					  piensa en como aprovechar la
+					  energ&iacute;a solar">
+    <meta name="author" content="Aldo Mar&iacute;a Vizcaino">
 
-    <title>Awrora Solar - We work saving electric power</title>
+    <title>Awrora Solar - Trabajamos la energía</title>
+    <!-- <title>Awrora Solar - We work saving electric power</title> -->
 
     <!-- Bootstrap Core CSS -->
     <link href="static/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +22,7 @@
     <link href="static/css/agency.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="static/font-awesome/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -31,9 +35,12 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link href="{{ url_for('static', filename='css/style.scss.css') }}"
+      rel="stylesheet" type="text/css">
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 
     <script type="text/javascript" src="static/js/stackoverflow.js"></script>
+    <script type="text/javascript" src="static/js/radiation.js"></script>
 </head>
 
 <body id="page-top" class="index">
@@ -59,19 +66,19 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#portfolio">Proyectos</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#services">Servicios</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">Historia</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#team">Team</a>
+                        <a class="page-scroll" href="#team">Nosotros</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Contacto</a>
                     </li>
                 </ul>
             </div>
@@ -84,12 +91,68 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome to Innovate with Tecnology!</div>
-                <div class="intro-heading">We want a better world</div>
+                <div class="intro-lead-in">Trabajamos la energía</div>
+                <div class="intro-heading">con la mejor energía...</div>
                 <a href="#services" class="page-scroll btn btn-xl">Start PLaying</a>
             </div>
         </div>
     </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="portfolio" class="bg-light-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Proyectos</h2>
+                    <h3 class="section-subheading text-muted">Nuestros proyecto principal es lumisol, pero para poder llevarlo adelante tambien realizamos otras actividades.</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/img/portfolio/roundicons.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Lumisol</h4>
+                        <p class="text-muted">Iluminación solar</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>Imprenta 3d</h4>
+                        <p class="text-muted">Servicio de impresión 3d </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content">
+                                <i class="fa fa-plus fa-3x"></i>
+                            </div>
+                        </div>
+                        <img src="static/img/portfolio/treehouse.png" class="img-responsive" alt="">
+                    </a>
+                    <div class="portfolio-caption">
+                        <h4>kuzco</h4>
+                        <p class="text-muted">Mobiliario de cartón</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Services Section -->
     <section id="services">
@@ -108,24 +171,21 @@
                     </span>
                     <h4 class="service-heading">Get Location</h4>
 		    <p> averiguamos por el navegador la posicion del usuario</p>
- 		    <input type="button" value="Where are you?" onclick="getLocation()"/>
-		    <p> si es correcto se termina y sino damos un mapa para que ubique el lugar y asi sacar latitud y longitud</p>
+ 		    <input type="button" value="Donde estas?" onclick="getLocation()"/>
+
 		    <div id="locationData">
 		    </div>
 
-		    <div id="locationName">
-		    </div>
 
-    		    <input type="button" value="latitud" onclick="getLocation()"/>
-		    <input type="button" value="longitud" onclick="getLocation()"/>
+		    <p> Es correcto?</p>
+
 		    <script>
-		     var locationdata = document.getElementById("locationData");
-		     var locationname = document.getElementById("locationName");
-		     
+		     locationdata = document.getElementById("locationData");
+
 		     function getLocation() {
 			 if (navigator.geolocation) {
 			     navigator.geolocation.getCurrentPosition(showPosition);
-			 } else { 
+			 } else {
 			     x.innerHTML = "Geolocation is not supported by this browser.";
 			 }
 		     }
@@ -138,20 +198,33 @@
 			 codeLatLng(lat,lng)
 		     }
 		    </script>
-
+		</div>
                 <div class="col-md-4">
                     <span class="fa-stack fa-4x">
                         <i class="fa fa-circle fa-stack-2x text-primary"></i>
                         <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
                     </span>
-                    <h4 class="service-heading">Get Radiation</h4>
+                    <!-- <h4 class="service-heading">Get Radiation</h4> -->
+		    <h4 class="service-heading">Obtener radiacion</h4>
                     <p class="text-muted">Get Radiation acording to proximity and NASA.</p>
 		    <p class="text-muted"> We are a group of three, so we need your help</p>
-		    <p>Si tu ubicacion es correcta podes visitar el sitio https://eosweb.larc.nasa.gov/sse/RETScreen/ y completar con esos datos</p>
+		    <!-- <p>Si tu ubicacion es correcta podes visitar el sitio https://eosweb.larc.nasa.gov/sse/RETScreen/ y completar con esos datos</p> -->
+
+
+		    <input id="avg-radiation"type="text" class="search-query" placeholder="Anual Measured daily solar radiation" />
+                    <p>kWh/m2</p>
+		    <input type="button" value="Obtener calculo" onclick="getRadiation()"/>
+
 		    <div id="radiation">
 		    </div>
-		    <input type="button" value="completa aca con el promedio anual de radiacion" onclick="getLocation()"/>
-		    <p>Tenemos que tener tambien informacion del clima para la region</p>
+
+
+
+
+		    <!-- <p>Tenemos que tener tambien informacion del clima para la region</p> -->
+
+		    <!-- <p>Vamos a estimar primero en base a la radiacion. tenemos una circunsferencia que tiene 6,5 cms de diametro, calculamos el area pi*(3.25^2) = a 10.6525cm²</p> -->
+		    <!-- <p>Como sabemos que en nuestra zona tenemos una irradiancia de [aca va el dato obtenido de la nasa] hacemos una regla de tres simples y calculamos cuanta potencia es recibida en la superficie de 10 cm² </p> -->
 
                 </div>
                 <div class="col-md-4">
@@ -170,105 +243,48 @@
 		    </ul>
                 </div>
             </div>
-            </div>
-	</div>
-    </section>
-
-    <!-- Portfolio Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Portfolio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/static/img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Round Icons</h4>
-                        <p class="text-muted">Graphic Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Startup Framework</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Treehouse</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="static/img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-            </div>
+                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
+             <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+             <div class="portfolio-hover">
+             <div class="portfolio-hover-content">
+             <i class="fa fa-plus fa-3x"></i>
+             </div>
+             </div>
+             <img src="static/img/portfolio/golden.png" class="img-responsive" alt="">
+             </a>
+             <div class="portfolio-caption">
+             <h4>Golden</h4>
+             <p class="text-muted">Website Design</p>
+             </div>
+             </div>
+             <div class="col-md-4 col-sm-6 portfolio-item">
+             <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+             <div class="portfolio-hover">
+             <div class="portfolio-hover-content">
+             <i class="fa fa-plus fa-3x"></i>
+             </div>
+             </div>
+             <img src="static/img/portfolio/escape.png" class="img-responsive" alt="">
+             </a>
+             <div class="portfolio-caption">
+             <h4>Escape</h4>
+             <p class="text-muted">Website Design</p>
+             </div>
+             </div>
+             <div class="col-md-4 col-sm-6 portfolio-item">
+             <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+             <div class="portfolio-hover">
+             <div class="portfolio-hover-content">
+             <i class="fa fa-plus fa-3x"></i>
+             </div>
+             </div>
+             <img src="static/img/portfolio/dreams.png" class="img-responsive" alt="">
+             </a>
+             <div class="portfolio-caption">
+             <h4>Dreams</h4>
+             <p class="text-muted">Website Design</p>
+             </div>
+             </div> -->
         </div>
     </section>
 
@@ -278,7 +294,7 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">About</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Awrora Solar somos un grupo de personas.</h3>
                 </div>
             </div>
             <div class="row">
@@ -286,32 +302,34 @@
                     <ul class="timeline">
                         <li>
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="static/img/about/1.jpg" alt="">
+				<a href="https://www.youtube.com/watch?v=eccFnUR6a7Q"><img class="img-circle img-responsive" src="static/img/about/V-EncuentroEmprendedores.png" alt="Video quinto encuentro de emprendedores"></a>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>2009-2011</h4>
-                                    <h4 class="subheading">Our Humble Beginnings</h4>
+                                    <h4>Noviembre 2013</h4>
+                                    <h4 class="subheading">Primer trabajo grupal</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">Nos conocimos, formamos un equipo y conseguimos el primer premio en el V encuentro de emprendedores!</p>
                                 </div>
                             </div>
                         </li>
                         <li class="timeline-inverted">
                             <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="static/img/about/2.jpg" alt="">
+                                <a href="https://www.youtube.com/watch?v=AH_pLZ5ojbU">
+                                    <img class="img-circle img-responsive" src="static/img/about/m2m.png" alt="Video de presentación a m2m"></a>
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>March 2011</h4>
-                                    <h4 class="subheading">An Agency is Born</h4>
+                                    <h4>Julio 2014</h4>
+                                    <h4 class="subheading">Presentación a Model2Market Red Emprendia</h4>
                                 </div>
                                 <div class="timeline-body">
-                                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+                                    <p class="text-muted">No aplicamos, igual nos sirvio para aprender!</p>
                                 </div>
                             </div>
                         </li>
+                        <!--
                         <li>
                             <div class="timeline-image">
                                 <img class="img-circle img-responsive" src="static/img/about/3.jpg" alt="">
@@ -340,6 +358,7 @@
                                 </div>
                             </div>
                         </li>
+                        -->
                         <li class="timeline-inverted">
                             <div class="timeline-image">
                                 <h4>Be Part
@@ -358,52 +377,49 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Amazing Team</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Equipo</h2>
+                    <h3 class="section-subheading text-muted">Somos un equipo interdisciplinario que deja volar la imaginación con los pies en el suelo.</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Kay Garland</h4>
-                        <p class="text-muted">Lead Designer</p>
+                        <img src="static/img/team/aldo.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Aldo María Vizcaino</h4>
+                        <p class="text-muted">Co-fundador</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/krahser"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            <li><a href="https://www.google.com/+AldoMariaVizcaino"><i class="fa fa-google-plus"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="https://ar.linkedin.com/in/krahser/es"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Larry Parker</h4>
-                        <p class="text-muted">Lead Marketer</p>
+                        <img src="static/img/team/ale.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Alejandro Enrique Zurita</h4>
+                        <p class="text-muted">Co-fundador</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/zazurich"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <!-- <li><a href="#"><i class="fa fa-facebook"></i></a> -->
+                            <li><a href="http://ar.linkedin.com/pub/alejandro-enrique-zurita/95/208/537/es"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="team-member">
-                        <img src="static/img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Diana Pertersen</h4>
-                        <p class="text-muted">Lead Developer</p>
+                        <img src="static/img/team/mati.jpg" class="img-responsive img-circle" alt="">
+                        <h4>Matías Schulman</h4>
+                        <p class="text-muted">Co-fundador</p>
                         <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            <li><a href="https://twitter.com/Mati_schulman"><i class="fa fa-twitter"></i></a>
                             </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            <li><a href="http://ar.linkedin.com/pub/mat%C3%ADas-schulman/6a/a9/52/es"><i class="fa fa-linkedin"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -411,46 +427,19 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+                    <p class="large text-muted">Como equipo nos interesa aplicar tecnología que mejore la calidad de vida.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Clients Aside -->
-    <aside class="clients">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="static/img/logos/envato.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="static/img/logos/designmodo.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="static/img/logos/themeforest.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <a href="#">
-                        <img src="static/img/logos/creative-market.jpg" class="img-responsive img-centered" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </aside>
-
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading">Contactanos</h2>
+                    <h3 class="section-subheading text-muted">Dejanos un mensaje y nos pondremos en contacto.</h3>
                 </div>
             </div>
             <div class="row">
@@ -493,26 +482,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; Your Website 2014</span>
+                    <span class="copyright">Copyright &copy; Awrora Solar 2015</span>
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
+                        <li><a href="https://twitter.com/AwroraSolar#"><i class="fa fa-twitter"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
+                        <li><a href="https://plus.google.com/115063343764260003675/videos"><i class="fa fa-google-plus"></i></a>
                         </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                        <li><a href="https://www.facebook.com/AwroraSolar"><i class="fa fa-facebook"></i></a>
                         </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
+                        <li><a href="https://www.linkedin.com/company/awrora-solar?trk=biz-companies-cym"><i class="fa fa-linkedin"></i></a>
                         </li>
                     </ul>
                 </div>
+                <!-- <div class="col-md-4">
+         <ul class="list-inline quicklinks">
+         <li><a href="#">Privacy Policy</a>
+         </li>
+         <li><a href="#">Terms of Use</a>
+         </li>
+         </ul>
+         </div> -->
             </div>
         </div>
     </footer>
@@ -534,10 +525,12 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <!-- Project Details Go Here -->
-                            <h2>Project Name</h2>
+                            <h2>Lumisol</h2>
                             <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
                             <img class="img-responsive" src="static/img/portfolio/roundicons-free.png" alt="">
-                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+                            <p>aca va un papper super interesante en español e ingles</p>
+                            <a href="http://web.ornl.gov/sci/btc/pdfs/maxey_doc12657_hsl_08.pdf">Papper</a>
+                            <a href="http://www.opticsinfobase.org/oe/fulltext.cfm?uri=oe-21-S4-A642&id=253881">Otro Papper</a>
                             <p>
                                 <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
                             <ul class="list-inline">
@@ -688,7 +681,7 @@
     </div>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="static/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="static/js/bootstrap.min.js"></script>

@@ -20,11 +20,7 @@ function codeLatLng(lat, lng) {
     var latlng = new google.maps.LatLng(lat, lng);
     geocoder.geocode({'latLng': latlng}, function(results, status) {
 	if (status == google.maps.GeocoderStatus.OK) {
-	    console.log(results)
 	    if (results[1]) {
-		//formatted address
-		alert(results[0].formatted_address)
-		console.log(results[0].address_components)
 		//find country name
 		for (var i=0; i<results[0].address_components.length; i++) {
 		    for (var b=0;b<results[0].address_components[i].types.length;b++) {
@@ -40,20 +36,28 @@ function codeLatLng(lat, lng) {
 			    state = results[0].address_components[i];
 			    break;
 			}
-		    
+
+			if (results[0].address_components[i].types[b] == "country") {
+			    //this is the object you are looking for
+			    country = results[0].address_components[i];
+			    break;
+			}
+
 
 		    }
 		}
 		//city data
-		locationdata.innerHTML = "Latitud: " + lat + "<br>Longitud: " + lng;
-		locationname.innerHTML = "City Name: " + city.long_name + "<br>State name: " + state.long_name;
+		locationdata.innerHTML = "<a href='https://eosweb.larc.nasa.gov/cgi-bin/sse/retscreen.cgi?email=rets%40nrcan.gc.ca&step=1&lat=" + lat + "&lon=" + lng + "&submit=Submit'>" +  city.long_name + ", " + state.long_name + ", " + country.long_name + "</a>"; // 
+
+		//locationdata.innerHTML = "<iframe width='480' height='320' src='https://eosweb.larc.nasa.gov/cgi-bin/sse/retscreen.cgi?email=rets%40nrcan.gc.ca&step=1&lat=" + lat + "&lon=" + lng + "&submit=Submit' frameborder='0'  allowfullscreen></iframe>"
+
 		
 		
 	    } else {
-		alert("No results found");
+		locationdata.innerHTML = "No se encontraron resultados";
 	    }
 	} else {
-	    alert("Geocoder failed due to: " + status);
+	    locationdata.innerHTML = "Geocoder failed due to: " + status;
 	}
     });
 }

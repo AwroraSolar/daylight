@@ -1,0 +1,13 @@
+/* line 3, /mnt/krahser/Work/Awrora/daylight/src/static/sass/_header.scss */
+header {
+  background-image: url(/static/img/header-awrora.jpg); }
+
+/* line 7, /mnt/krahser/Work/Awrora/daylight/src/static/sass/_header.scss */
+.navbar-default {
+  color: #649018; }
+
+/* line 9, /mnt/krahser/Work/Awrora/daylight/src/static/sass/style.scss */
+ul.social-buttons li a:hover, ul.social-buttons li a:focus, ul.social-buttons li a:active {
+  background-color: #649018; }
+
+/*# sourceMappingURL=../css/style.scss.css.map */

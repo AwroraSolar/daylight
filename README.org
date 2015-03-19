@@ -2,12 +2,14 @@
 - startbootstrap-agency-1.0.1
 - scrapy
 - flask
+-
 * TODO Objective
 - Get Location [1/2]
   - [X] [[http://www.developerdrive.com/2012/01/using-html5-to-determine-user-location/][Location references]]
   - [ ] Let User choose a location
 - Get Radiation [0/3]
   - [ ] Some point close proximity
+    - scrapy items and save in database
   - [ ] Let user help use and set radiation
   - [ ] Average hours of sun light
 - Make a calc of money [0/2]
@@ -15,5 +17,3 @@
   - [ ] Explain a calc of money invest in sunlight days
 - Play with Awrora [0/1]
   - [ ] How many awrora products you need to use in your home?
-
-

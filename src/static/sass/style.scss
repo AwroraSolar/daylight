@@ -1,0 +1,11 @@
+$green1: #649018;
+$green2: #98c013;
+
+
+@import 'header';
+
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+    background-color: $green1;
+}
